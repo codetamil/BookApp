@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>controller.BookController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>NewController</servlet-name>
+  	<display-name>NewController</display-name>
+  	<description></description>
+  	<servlet-class>com.controllers.NewController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>BookController</servlet-name>
   	<url-pattern>/BookController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>NewController</servlet-name>
+  	<url-pattern>/NewController</url-pattern>
   </servlet-mapping>
 </web-app>

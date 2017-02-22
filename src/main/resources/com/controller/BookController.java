@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -39,15 +40,26 @@ public class BookController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 		
+		//PrintWriter out=response.getWriter();
+		doGet(request, response);
+		//1
 		String bookName=request.getParameter("book_name");
 		
 		String authorName=request.getParameter("author_name");
 		
 		String bookType=request.getParameter("book_type");
 		
+		String option=request.getParameter("r_one");
 		
+		String check=request.getParameter("check");
+		
+		System.out.println(option);
+		
+		System.out.println(check);
+		
+		//out.println("<html><head></head><body></body></html>");
+		//2
 		Book book = new Book();
 		
 		book.setBookName(bookName);
@@ -55,11 +67,11 @@ public class BookController extends HttpServlet {
 		book.setAuthorName(authorName);
 		
 		book.setBookType(bookType);
-		
-		
+		//DAO call
+		//3
 		request.setAttribute("book",book);
 				
-		
+		//4
 		RequestDispatcher rd= request.getRequestDispatcher("show.jsp");
 		
 		rd.forward(request, response);

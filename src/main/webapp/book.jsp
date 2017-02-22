@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -10,9 +10,9 @@
 <h2>Book Details</h2>
 <form action="BookController" method="post">
 
-Book Name:<input type="text" name="book_name"/><br>
+Book Name:<input type="text" name="book_name" autofocus required/><br>
 
-Author   :<input type="text" name="author_name"/><br><br>
+Author   :<input type="text" name="author_name" required/><br><br>
 
 <p><h2>SELECT THE BOOKS</h2></p><br><br>
 
@@ -23,6 +23,18 @@ Author   :<input type="text" name="author_name"/><br><br>
   <option value="fiction">Fiction</option>
   <option value="Classic">Classic</option>
 </select><br>
+<br><br>
+READ HERE:<input type="radio" name="r_one" value="read here" required/>
+
+TAKE HOME:<input type="radio" name="r_one" value="home" required/><br><br><br>
+
+<input type="checkbox" name="check" value="Visitor" required/>Visitor
+<input type="checkbox" name="check1" value="Member" required/>Member
+<input type="checkbox" name="check2" value="Employee" required/>Employee
+<input type="checkbox" name="check3" value="VIP"/ required>VIP <br/><br/><br/>
+
+
+DATE OF DELIVERY<input type="date" name="dday"/><br/><br/><br/>
 
 <button type="submit">select</button>
 

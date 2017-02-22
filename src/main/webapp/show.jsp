@@ -13,11 +13,17 @@
 
 
 
-NAME OF THE BOOK : <p>${requestScope.book.bookName}</p><br>
+NAME OF THE BOOK : <p>${book.bookName}</p><br>
 
-NAME OF THE AUTHOR: <p>${requestScope.book.authorName}</p><br>
+NAME OF THE AUTHOR: <p>${book.authorName}</p><br>
 
-TYPE Of THE BOOK :<p>${requestScope.book.bookType}</p><br>
+TYPE Of THE BOOK :<p>${book.bookType}</p><br><br>
+
+
+<h2>Welcome to the Library</h2>
+
+
+<textarea name="comment" rows="10" cols="50">Write your comments here</textarea>
 
 </body>
 </html>
